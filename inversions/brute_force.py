@@ -8,6 +8,3 @@ def count_inversions(inlist):
             else:
                 inversions += 1
     return inversions
-
-
-print(count_inversions([6, 5, 4, 3, 2, 1]))

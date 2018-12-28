@@ -1,6 +1,3 @@
-import time
-import random
-from matplotlib import pyplot as plt
 
 
 def merge_sort(inlist):
@@ -9,10 +6,10 @@ def merge_sort(inlist):
         return inlist
     else:
         a, b = merge_sort(inlist[:n // 2]), merge_sort(inlist[n // 2:])
-        return merged(a, b)
+        return merge(a, b)
 
 
-def merged(x, y):
+def merge(x, y):
     is_merged = False
     i, j = 0, 0
     output = []
