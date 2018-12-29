@@ -38,8 +38,12 @@ def merge(x, y):
     return output, inversions
 
 
-num = 10000
-test = [random.randint(1, num) for x in range(num)]
-brute = brute_force.count_inversions(test)
-divconq = count_merge_inversions(test)[1]
-print(brute, divconq, brute == divconq)
+# num = 101
+# pre_sorted = [i for i in range(1, num)]
+# print(pre_sorted)
+# test = []
+# for j in range(num-1):
+#     test.append(pre_sorted.pop(random.randint(0, len(pre_sorted)-1)))
+# brute = brute_force.count_inversions(test)
+# divconq = count_merge_inversions(test)
+# print(brute, divconq, brute == divconq[1])
