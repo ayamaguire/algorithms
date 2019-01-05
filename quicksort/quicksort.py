@@ -1,7 +1,12 @@
 import random
 
 
+running = 0
+
+
 def partition(input, pos):
+    global running
+    running = running + len(input) - 1
     input[pos], input[0] = input[0], input[pos]
     pivot = input[0]
     i = 1
@@ -15,16 +20,37 @@ def partition(input, pos):
     return i-1
 
 
-def sort(input, iteration=0):
+def median_of_three(input):
+    n = len(input)
+    if n % 2 == 0:
+        middle = (n // 2) - 1
+    else:
+        middle = n // 2
+    middle_el = input[middle]
+    last_el = input[-1]
+    first_el = input[0]
+    options = [first_el, middle_el, last_el]
+    options.sort()
+    if options[1] == first_el:
+        return 0
+    elif options[1] == middle_el:
+        return middle
+    else:
+        return -1
+
+
+def sort(input):
     n = len(input)
     if n < 2:
         return input
-    p = random.randint(0, n-1)
+    # p = random.randint(0, n-1)
+    # p = median_of_three(input)
+    p = 0
     pivot = input[p]
     q = partition(input, p)
     left, right = input[:q], input[q+1:]
-    left = sort(left, iteration=iteration+1)
-    right = sort(right, iteration=iteration+1)
+    left = sort(left)
+    right = sort(right)
     return left + [pivot] + right
 
 
@@ -59,13 +85,14 @@ def inplace_sort(input, left=None, right=None):
 
 
 if __name__ == '__main__':
-    the_list = [random.randint(0, 10000) for elem in range(100000)]
-    a_list = the_list.copy()
-    inplace_sort(the_list)
-    a_list.sort()
-    print(the_list == a_list)
-
-    # the_list = [3, 8, 2, 5, 1, 4, 7, 6]
+    # the_list = [random.randint(0, 10000) for elem in range(100000)]
+    # a_list = the_list.copy()
     # inplace_sort(the_list)
-    # print(the_list)
+    # a_list.sort()
+    # print(the_list == a_list)
 
+    with open('quicksort/numbers.txt', 'r') as f:
+        integers = [int(line) for line in f]
+
+    sort(integers)
+    print(running)
