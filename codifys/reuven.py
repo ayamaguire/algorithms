@@ -28,7 +28,7 @@ class Tree(object):
     def evaluate(self):
         new_leaves = []
         for leaf in self.leaves:
-            new_leaves.append(leaf.evaluate())
+            new_leaves.append(leaf.flatten())
         self.leaves = new_leaves
         if self.operator == '+':
             self.add()
