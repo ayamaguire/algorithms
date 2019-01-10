@@ -31,14 +31,16 @@ def reverse_search(graph, i, F, t, s, explored, leaders):
     :param list explored: the list of nodes already explored
     :param dict leaders: dict of leaders for each node marking SCCs
     :return F, the dict of node labels, filled in"""
-    explored.append(i)
-    leaders[i] = s
-    for node in graph[i]:
-        if node not in explored:
-            F, t, leaders = reverse_search(graph, node, F, t, s, explored, leaders)
-    t = t - 1
-    F[i] = t
-    return F, t, leaders
+    # explored.append(i)
+    # leaders[i] = s
+    # for node in graph[i]:
+    #     if node not in explored:
+    #         F, t, leaders = reverse_search(graph, node, F, t, s, explored, leaders)
+    # t = t - 1
+    # F[i] = t
+    # return F, t, leaders
+    graph_rev = reverse_graph(graph)
+    return search(graph_rev, i, F, t, s, explored, leaders)
 
 
 def search_loop(graph, direction):
@@ -52,9 +54,13 @@ def search_loop(graph, direction):
     finishing_times = dict()
     leaders = dict()
     explored = []
-    for node in list(graph.keys())[::-1]:
+    keys = list(graph.keys())
+    keys.sort()
+    keys.reverse()
+    for node in keys:
         if node not in explored:
             s = node
+            print("searching on: {}".format(node))
             if direction == 'forward':
                 finishing_times, t, leaders = search(graph, node, finishing_times, t, s, explored, leaders)
             elif direction == 'reverse':
@@ -87,8 +93,11 @@ def reverse_graph(graph):
 
 def kosaraju(graph):
     f1, l1 = search_loop(graph, 'reverse')
+    print("searched backwards")
     graph = relabel_graph(graph, f1)
+    print("Relabelled graph")
     f2, l2 = search_loop(graph, 'forward')
+    print("searched forward")
     sccs = dict()
     for key, val in l2.items():
         if not sccs.get(val):
@@ -106,6 +115,9 @@ if __name__ == '__main__':
     #               5: [6],
     #               6: [4]
     #               }
+
+    # test_graph = {0: [1, 2], 1: [3], 2: [4], 3: [1, 4], 4: [2], 5: [3, 5]}
+    #
     # print(kosaraju(test_graph))
 
     # scc_graph = dict()
@@ -121,6 +133,7 @@ if __name__ == '__main__':
     # with open('graphs/DFS/scc.pkl', 'wb') as file:
     #     pickle.dump(scc_graph, file, pickle.HIGHEST_PROTOCOL)
 
+    # RUN KOSARAJU ON THE BIG GRAPH!
     with open('graphs/DFS/scc.pkl', 'rb') as file:
         scc_graph = pickle.load(file)
 
