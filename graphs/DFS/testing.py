@@ -4,8 +4,8 @@ import random
 
 
 test_graph = dict()
-n = 99999
-b = 10
+n = 100
+b = 3
 for i in range(n):
     test_graph[i] = list(set([random.randint(0, n-1) for j in range(random.randint(0, b))]))
     # test_graph[i].extend(list(set([random.randint(i+1, n-1) for j in range(random.randint(0, 1))])))
