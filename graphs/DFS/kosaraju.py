@@ -1,4 +1,5 @@
 import pickle
+from collections import deque
 
 
 def recursive_search(graph, i, F, t, s, explored, leaders):
@@ -33,7 +34,8 @@ def search(graph, i, F, t, s, explored, leaders):
     :return F, the dict of node labels, filled in"""
     explored.append(i)
     # leaders[i] = s
-    stack = [i]
+    stack = deque()
+    stack.append(i)
     order = [i]
     while stack:
         v = stack.pop()

@@ -1,16 +1,19 @@
+from collections import deque
+
 
 def search(graph, s):
     """ Search an undirected graph to find all nodes connected to s
     :param dict graph: dictionary representing an undirected graph.
     :return a list of nodes reachable from s"""
     explored = [s]
-    Q = [s]
-    while Q:
-        v = Q.pop(0)
+    queue = deque()
+    queue.append(s)
+    while queue:
+        v = queue.popleft()
         for node in graph[v]:
             if node not in explored:
                 explored.append(node)
-                Q.append(node)
+                queue.append(node)
     return explored
 
 

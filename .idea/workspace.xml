@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17a15b59-7292-40fb-bbad-02e17a27420d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/codifys/chapter1/1.3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codifys/chapter1/1.4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codifys/chapter1/1.5.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codifys/chapter1/1.6.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codifys/chapter1/1.7.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codifys/chapter1/1.8.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codifys/chapter2/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codifys/chapter2/linkedlist.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs/BFS/BFS.py" beforeDir="false" afterPath="$PROJECT_DIR$/graphs/BFS/BFS.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/graphs/DFS/kosaraju.py" beforeDir="false" afterPath="$PROJECT_DIR$/graphs/DFS/kosaraju.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs/DFS/testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/graphs/DFS/testing.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +34,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codifys/chapter1/1.8.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="294">
@@ -47,12 +43,22 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/codifys/chapter2/linkedlist.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="921">
+              <caret line="172" lean-forward="true" selection-start-line="172" selection-end-line="172" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/graphs/DFS/kosaraju.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="124" column="36" selection-start-line="124" selection-start-column="36" selection-end-line="124" selection-end-column="36" />
+            <state relative-caret-position="204">
+              <caret line="39" column="16" lean-forward="true" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
               <folding>
+                <element signature="e#0#13#0" expanded="true" />
                 <element signature="e#80#800#0" />
                 <element signature="e#858#1334#1" />
                 <element signature="e#837#1586#0" />
@@ -71,6 +77,24 @@
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/graphs/BFS/BFS.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="423">
+              <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/graphs/DFS/topological.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="577">
+              <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -133,17 +157,18 @@
         <option value="$PROJECT_DIR$/codifys/chapter1/1.1.py" />
         <option value="$PROJECT_DIR$/codifys/chapter1/1.2.py" />
         <option value="$PROJECT_DIR$/graphs/DFS/__init__.py" />
-        <option value="$PROJECT_DIR$/graphs/BFS/BFS.py" />
         <option value="$PROJECT_DIR$/graphs/DFS/DFS.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/graphs/DFS/testing.py" />
-        <option value="$PROJECT_DIR$/graphs/DFS/kosaraju.py" />
         <option value="$PROJECT_DIR$/codifys/chapter1/1.3.py" />
         <option value="$PROJECT_DIR$/codifys/chapter1/1.4.py" />
         <option value="$PROJECT_DIR$/codifys/chapter1/1.5.py" />
         <option value="$PROJECT_DIR$/codifys/chapter1/1.6.py" />
         <option value="$PROJECT_DIR$/codifys/chapter1/1.7.py" />
         <option value="$PROJECT_DIR$/codifys/chapter1/1.8.py" />
+        <option value="$PROJECT_DIR$/graphs/BFS/BFS.py" />
+        <option value="$PROJECT_DIR$/graphs/DFS/kosaraju.py" />
+        <option value="$PROJECT_DIR$/codifys/chapter2/linkedlist.py" />
       </list>
     </option>
   </component>
@@ -172,7 +197,7 @@
               <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
               <item name="algorithms" type="462c0819:PsiDirectoryNode" />
               <item name="codifys" type="462c0819:PsiDirectoryNode" />
-              <item name="chapter1" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
@@ -383,9 +408,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49964765" weight="0.32891566" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32891566" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4982382" visible="true" weight="0.42771083" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5017618" side_tool="true" weight="0.50843376" />
-      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49964765" weight="0.31566265" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49753347" weight="0.42771083" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5024665" side_tool="true" weight="0.42771083" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="10" sideWeight="0.4982382" visible="true" weight="0.46506023" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -617,40 +642,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graphs/DFS/topological.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="28" selection-start-line="28" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graphs/BFS/BFS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/graphs/DFS/testing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
           <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graphs/DFS/kosaraju.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="124" column="36" selection-start-line="124" selection-start-column="36" selection-end-line="124" selection-end-column="36" />
-          <folding>
-            <element signature="e#80#800#0" />
-            <element signature="e#858#1334#1" />
-            <element signature="e#837#1586#0" />
-            <element signature="e#814#1290#1" />
-            <element signature="e#1137#1442#0" />
           </folding>
         </state>
       </provider>
@@ -711,6 +708,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graphs/BFS/BFS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graphs/DFS/kosaraju.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="39" column="16" lean-forward="true" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#80#800#0" />
+            <element signature="e#858#1334#1" />
+            <element signature="e#837#1586#0" />
+            <element signature="e#814#1290#1" />
+            <element signature="e#1137#1442#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graphs/DFS/topological.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codifys/chapter2/linkedlist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="921">
+          <caret line="172" lean-forward="true" selection-start-line="172" selection-end-line="172" />
         </state>
       </provider>
     </entry>
