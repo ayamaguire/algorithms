@@ -1,5 +1,7 @@
 import pickle
 from collections import deque
+import sys
+sys.setrecursionlimit(65532)
 
 
 def recursive_search(graph, i, F, t, s, explored, leaders):
@@ -12,14 +14,15 @@ def recursive_search(graph, i, F, t, s, explored, leaders):
     :param list explored: the list of nodes already explored
     :param dict leaders: dict of leaders for each node marking SCCs
     :return F, the dict of node labels, filled in"""
+    print("len of explored: {}".format(len(explored)))
     explored.append(i)
     leaders[i] = s
-    for node in graph[i]:
+    for node in graph.get(i, []):
         if node not in explored:
-            F, t, leaders = recursive_search(graph, node, F, t, s, explored, leaders)
+            F, t, leaders, explored = recursive_search(graph, node, F, t, s, explored, leaders)
     t += 1
     F[i] = t
-    return F, t, leaders
+    return F, t, leaders, explored
 
 
 def search(graph, i, F, t, s, explored, leaders):
@@ -84,6 +87,7 @@ def reverse_search(graph, i, F, t, s, explored, leaders):
 
 
 def search_loop(graph, rev=True):
+    print("entering search loop.")
     t = 0
     finishing_times = dict()
     leaders = dict()
@@ -92,12 +96,13 @@ def search_loop(graph, rev=True):
     nodes.sort()
     if rev:
         nodes.reverse()
+    print(nodes[0])
     for node in nodes:
-        # print("node: {}. explored {}".format(node, explored))
+        print("node: {}".format(node))
         if node not in explored:
             leader = node
             # print("searching on: {}".format(node))
-            finishing_times, t, leaders, explored = search(graph, node, finishing_times, t, leader, explored, leaders)
+            finishing_times, t, leaders, explored = recursive_search(graph, node, finishing_times, t, leader, explored, leaders)
     return finishing_times, leaders
 
 
@@ -123,23 +128,23 @@ def reverse_graph(graph):
 
 
 def kosaraju(graph):
-    print("Graph rev: {}".format(graph))
+    # print("Graph rev: {}".format(graph))
     f1, l1 = search_loop(graph, True)
-    # print("searched backwards")
+    print("searched backwards")
     print("finishing times: {}".format(f1))
-    graph = relabel_graph(graph, f1)
-    graph_rev = reverse_graph(graph)
-    print("Relabelled graph: {}".format(graph_rev))
-    f2, l2 = search_loop(graph_rev)
+    # graph = relabel_graph(graph, f1)
+    # graph_rev = reverse_graph(graph)
+    # # print("Relabelled graph: {}".format(graph_rev))
+    # f2, l2 = search_loop(graph_rev)
     # print("searched forward")
-    print("leaders: {}".format(l2))
-    sccs = dict()
-    for key, val in l2.items():
-        if not sccs.get(val):
-            sccs[val] = [key]
-        else:
-            sccs[val].append(key)
-    return sccs
+    # # print("leaders: {}".format(l2))
+    # sccs = dict()
+    # for key, val in l2.items():
+    #     if not sccs.get(val):
+    #         sccs[val] = [key]
+    #     else:
+    #         sccs[val].append(key)
+    # return sccs
 
 
 if __name__ == '__main__':
@@ -147,29 +152,30 @@ if __name__ == '__main__':
     # test_graph = {1: [2, 4], 2: [3], 3: [1], 4: [5, 7], 5: [6], 6: [4], 7: [8], 8: [9], 9: [7]}
     # test_graph = {0: [1, 7], 1: [8], 2: [0, 1], 3: [8, 1], 4: [2, 5], 5: [1, 9], 6: [3, 6], 7: [5], 8: [0, 6, 7], 9: [1, 5]}
 
-    test_graph = {0: [], 1: [2, 3, 7], 2: [0, 7], 3: [], 4: [], 5: [8, 2, 6], 6: [6], 7: [3, 6], 8: [8, 2], 9: [2]}
-
-    #graph_rev = reverse_graph(test_graph)
-    # print(graph_rev)
-    # print(search_loop(graph_rev))
-    print("kosaraju says: {}".format(kosaraju(test_graph)))
-
-    # scc_graph = dict()
+    # test_graph = {0: [], 1: [2, 3, 7], 2: [0, 7], 3: [], 4: [], 5: [8, 2, 6], 6: [6], 7: [3, 6], 8: [8, 2], 9: [2]}
     #
-    # with open('graphs/DFS/scc.txt', 'r') as file:
-    #     for line in file:
-    #         vals = line.split()
-    #         if not scc_graph.get(vals[0]):
-    #             scc_graph[vals[0]] = [elem for elem in vals[1:]]
-    #         else:
-    #             scc_graph[vals[0]].extend([elem for elem in vals[1:]])
-    #
-    # with open('graphs/DFS/scc.pkl', 'wb') as file:
-    #     pickle.dump(scc_graph, file, pickle.HIGHEST_PROTOCOL)
+    # #graph_rev = reverse_graph(test_graph)
+    # # print(graph_rev)
+    # # print(search_loop(graph_rev))
+    # print("kosaraju says: {}".format(kosaraju(test_graph)))
+
+    scc_graph = dict()
+
+    with open('graphs/DFS/scc.txt', 'r') as file:
+        for line in file:
+            vals = line.split()
+            if not scc_graph.get(int(vals[0])):
+                scc_graph[int(vals[0])] = [int(elem) for elem in vals[1:]]
+            else:
+                scc_graph[int(vals[0])].extend([int(elem) for elem in vals[1:]])
+
+    with open('graphs/DFS/scc.pkl', 'wb') as file:
+        pickle.dump(scc_graph, file, pickle.HIGHEST_PROTOCOL)
 
     # RUN KOSARAJU ON THE BIG GRAPH!
-    # with open('graphs/DFS/scc.pkl', 'rb') as file:
-    #     scc_graph = pickle.load(file)
+    with open('graphs/DFS/scc.pkl', 'rb') as file:
+        scc_graph = pickle.load(file)
+    print(scc_graph.keys())
     #
     # leaders = kosaraju(scc_graph)
     # print(leaders)
