@@ -4,7 +4,7 @@ import sys
 sys.setrecursionlimit(65532)
 
 
-def recursive_search(graph, i, F, t, s, explored, leaders):
+def recursive_search(graph, i, F, t, s, explored, leaders, order):
     """ Search a directed acyclic graph for topological sort
     :param dict graph: dictionary representing a directed graph.
     :param int i: the starting node
@@ -14,14 +14,18 @@ def recursive_search(graph, i, F, t, s, explored, leaders):
     :param list explored: the list of nodes already explored
     :param dict leaders: dict of leaders for each node marking SCCs
     :return F, the dict of node labels, filled in"""
-    print("len of explored: {}".format(len(explored)))
+    x = len(explored)
+    if x % 10 == 0:
+        print("Length of explored: {}".format(x))
     explored.append(i)
-    leaders[i] = s
+    if order == 2:
+        leaders[i] = s
     for node in graph.get(i, []):
         if node not in explored:
-            F, t, leaders, explored = recursive_search(graph, node, F, t, s, explored, leaders)
-    t += 1
-    F[i] = t
+            F, t, leaders, explored = recursive_search(graph, node, F, t, s, explored, leaders, order)
+    if order == 1:
+        t += 1
+        F[i] = t
     return F, t, leaders, explored
 
 
@@ -37,22 +41,25 @@ def search(graph, i, F, t, s, explored, leaders):
     :return F, the dict of node labels, filled in"""
     explored.append(i)
     # leaders[i] = s
-    stack = deque()
+    stack = deque([i])
     stack.append(i)
-    order = [i]
+    # order = [i]
     while stack:
         v = stack.pop()
-        for node in graph[v]:
+        for node in graph[v][::-1]:
             if node not in explored:
                 explored.append(node)
                 stack.append(node)
-                order.append(node)
+                # order.append(node)
+                leaders[node] = s
+                F[node] = t
+                t += 1
 
-    print("order: {}".format(order))
-    for elem in order[::-1]:
-        leaders[elem] = s
-        F[elem] = t
-        t += 1
+    # print("order: {}".format(order))
+    # for elem in order[::-1]:
+    #     leaders[elem] = s
+    #     F[elem] = t
+    #     t += 1
     return F, t, leaders, explored
 
 
@@ -86,7 +93,7 @@ def reverse_search(graph, i, F, t, s, explored, leaders):
     return F, t, leaders
 
 
-def search_loop(graph, rev=True):
+def search_loop(graph, order, rev=True):
     print("entering search loop.")
     t = 0
     finishing_times = dict()
@@ -96,13 +103,13 @@ def search_loop(graph, rev=True):
     nodes.sort()
     if rev:
         nodes.reverse()
-    print(nodes[0])
+    # print(nodes[0])
     for node in nodes:
-        print("node: {}".format(node))
+        # print("node: {}".format(node))
         if node not in explored:
             leader = node
             # print("searching on: {}".format(node))
-            finishing_times, t, leaders, explored = recursive_search(graph, node, finishing_times, t, leader, explored, leaders)
+            finishing_times, t, leaders, explored = recursive_search(graph, node, finishing_times, t, leader, explored, leaders, order)
     return finishing_times, leaders
 
 
@@ -129,22 +136,22 @@ def reverse_graph(graph):
 
 def kosaraju(graph):
     # print("Graph rev: {}".format(graph))
-    f1, l1 = search_loop(graph, True)
+    f1, l1 = search_loop(graph, 1, True)
     print("searched backwards")
-    print("finishing times: {}".format(f1))
-    # graph = relabel_graph(graph, f1)
-    # graph_rev = reverse_graph(graph)
-    # # print("Relabelled graph: {}".format(graph_rev))
-    # f2, l2 = search_loop(graph_rev)
-    # print("searched forward")
-    # # print("leaders: {}".format(l2))
-    # sccs = dict()
-    # for key, val in l2.items():
-    #     if not sccs.get(val):
-    #         sccs[val] = [key]
-    #     else:
-    #         sccs[val].append(key)
-    # return sccs
+    # print("finishing times: {}".format(f1))
+    graph = relabel_graph(graph, f1)
+    graph_rev = reverse_graph(graph)
+    # print("Relabelled graph: {}".format(graph_rev))
+    f2, l2 = search_loop(graph_rev, 2)
+    print("searched forward")
+    # print("leaders: {}".format(l2))
+    sccs = dict()
+    for key, val in l2.items():
+        if not sccs.get(val):
+            sccs[val] = [key]
+        else:
+            sccs[val].append(key)
+    return sccs
 
 
 if __name__ == '__main__':
