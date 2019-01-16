@@ -5,8 +5,8 @@ import random
 
 
 test_graph = dict()
-n = 100
-b = 3
+n = 1000
+b = 30
 for i in range(1, n+1):
     test_graph[i] = list(set([random.randint(1, n) for j in range(random.randint(0, b))]))
 print(test_graph)

@@ -44,16 +44,13 @@ def search(graph, i, F, t, s, explored, leaders, order):
     while stack:
         v = stack.pop()
         if v not in explored:
-            explored.append(v)
+            explored.add(v)
             stack.append(v)
             if order == 2:
                 leaders[v] = s
-            x = len(explored)
-            if x % 10 == 0:
-                print("Length of explored: {}".format(x))
+
             for node in graph.get(v, []):
                 if node not in explored:
-                    # explored.append(node)
                     stack.append(node)
                     if order == 2:
                         leaders[node] = s
@@ -99,12 +96,14 @@ def search_loop(graph, order, n):
     t = 0
     finishing_times = dict()
     leaders = dict()
-    explored = []
+    explored = set()
     # nodes = list(graph.keys())
     # nodes.sort()
     # nodes.reverse()
     # print(nodes[0])
     for node in range(n, 0, -1):
+        if node % 10 == 0:
+            print(node)
         if node not in explored:
             leader = node
             finishing_times, t, leaders, explored = search(graph, node, finishing_times, t, leader, explored, leaders, order)
@@ -137,7 +136,7 @@ def kosaraju(graph, n):
     # print("Graph rev: {}".format(graph))
     f1, l1 = search_loop(graph, 1, n)
     print("searched backwards")
-    # print("finishing times: {}".format(f1))
+    # print("finishing times keys: {}".format(f1.keys()))
     graph = relabel_graph(graph, f1)
     graph_rev = reverse_graph(graph)
     # print("Relabelled graph: {}".format(graph_rev))
@@ -181,9 +180,9 @@ if __name__ == '__main__':
     # RUN KOSARAJU ON THE BIG GRAPH!
     with open('graphs/DFS/scc.pkl', 'rb') as file:
         scc_graph = pickle.load(file)
-    # print(scc_graph.keys())
-    #
-    big_scc = kosaraju(scc_graph)
+    # print(len(scc_graph.keys()))
+
+    big_scc = kosaraju(scc_graph, 875714)
     print(big_scc)
 
     with open('graphs/DFS/big_scc.pkl', 'wb') as file:
