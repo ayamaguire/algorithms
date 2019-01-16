@@ -5,14 +5,14 @@ import random
 
 
 test_graph = dict()
-n = 100000
-b = 30
-for i in range(n):
-    test_graph[i] = list(set([random.randint(0, n-1) for j in range(random.randint(0, b))]))
+n = 100
+b = 3
+for i in range(1, n+1):
+    test_graph[i] = list(set([random.randint(1, n) for j in range(random.randint(0, b))]))
 print(test_graph)
 
 
-sccs = kosaraju.kosaraju(test_graph)
+sccs = kosaraju.kosaraju(test_graph, n)
 sccs_dict = dict()
 for key, val in sccs.items():
     if not sccs_dict.get(len(val)):
