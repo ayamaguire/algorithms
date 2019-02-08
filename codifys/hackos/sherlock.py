@@ -1,31 +1,24 @@
-from collections import defaultdict
+from collections import defaultdict, Counter
+
 
 def sherlock(s):
-    # s = abcd
-    # sets = [{a: 1}, {b: 1}, {c: 1}, {d: 1}]
-    # sets = [{a: 1, b: 1}, {b, c}, {c, d}]
-    # sets = [{a, b, c}, {b, c, d}]
     total = 0
-    for i in range(1, len(s)):
-        # i is length of substrings
-        n = len(s) - i + 1  # number of substrings per set
-        substrings = []
-        for j in range(n):
-            substringdict = defaultdict(int)
-            for char in s[j:j+i]:
-                substringdict[char] += 1
-            substrings.append(substringdict)
-        unique_substrings = []
-        for substring in substrings:
-            if substring in unique_substrings:
-                pass
-            else:
-                unique_substrings.append(substring)
-        print(substrings)
-        print(unique_substrings)
-        subtotal = len(substrings) - len(unique_substrings)
-        total += subtotal
+    for length in range(1, len(s)):
+        # length is length of substrings we're currently examining
+        n = len(s) - length + 1  # number of substrings per iteration
+        substring_counter = defaultdict(int)
+        for counter in [Counter(s[j:j+length]) for j in range(n)]:
+            subtuples = frozenset({(character, number) for character, number in counter.items()})
+            substring_counter[subtuples] += 1
+
+        for key, val in substring_counter.items():
+            total += summand(val)
+
     return total
+
+
+def summand(n):
+    return n * (n-1) // 2 # n choose 2 (number of matching pairs in string repeated n times)
 
 
 if __name__ == '__main__':

@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17a15b59-7292-40fb-bbad-02e17a27420d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/codifys/chapter4/4.3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codifys/chapter4/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codifys/chapter4/traversals.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codifys/chapter7/7.6.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codifys/chapter7/7.7.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codifys/chapter7/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codifys/hackos/input13.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codifys/hackos/sherlock.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codifys/hackos/strange_arrays.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sorts/insertion.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/swaps/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/swaps/brute_force.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/swaps/count_swaps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codifys/hackos/alternating_string.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codifys/hackos/subset_max.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codifys/hackos/triplets.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codifys/hackos/sherlock.py" beforeDir="false" afterPath="$PROJECT_DIR$/codifys/hackos/sherlock.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,40 +16,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codifys/tree-parens.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="32" column="45" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/inversions/divide_and_conquer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-372">
-              <folding>
-                <element signature="e#0#34#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/inversions/brute_force.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/swaps/brute_force.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/swaps/count_swaps.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -71,42 +28,66 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codifys/hackos/strange_arrays.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+            <state relative-caret-position="286">
+              <caret line="19" selection-start-line="19" selection-end-line="21" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codifys/hackos/triplets.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="129" selection-start-line="129" selection-end-line="132" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codifys/hackos/alternating_string.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codifys/hackos/subset_max.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/codifys/hackos/sherlock.py">
+        <entry file="file://$PROJECT_DIR$/graphs/BFS/BFS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="7" selection-start-line="7" selection-end-line="25" selection-end-column="16" />
+            <state relative-caret-position="423">
+              <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codifys/hackos/input06.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codifys/hackos/input03.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codifys/hackos/input00.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codifys/hackos/input13.txt">
           <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2sum/2sum.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2sum/numbers.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14366100">
-              <caret line="684100" column="1" selection-start-line="684100" selection-start-column="1" selection-end-line="684100" selection-end-column="1" />
-            </state>
-          </provider>
         </entry>
       </file>
     </leaf>
@@ -130,12 +111,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/quicksort/quicksort.py" />
-        <option value="$PROJECT_DIR$/heap.py" />
-        <option value="$PROJECT_DIR$/codifys/binary.py" />
-        <option value="$PROJECT_DIR$/codifys/reuven.pu.py" />
-        <option value="$PROJECT_DIR$/codifys/reuven.py" />
-        <option value="$PROJECT_DIR$/selection.py" />
         <option value="$PROJECT_DIR$/selection/reselect.py" />
         <option value="$PROJECT_DIR$/graphs/representation.py" />
         <option value="$PROJECT_DIR$/graphs/contract.py" />
@@ -181,6 +156,12 @@
         <option value="$PROJECT_DIR$/codifys/hackos/input13.txt" />
         <option value="$PROJECT_DIR$/codifys/hackos/strange_arrays.py" />
         <option value="$PROJECT_DIR$/codifys/hackos/sherlock.py" />
+        <option value="$PROJECT_DIR$/codifys/hackos/input03.txt" />
+        <option value="$PROJECT_DIR$/codifys/hackos/input06.txt" />
+        <option value="$PROJECT_DIR$/codifys/hackos/triplets.py" />
+        <option value="$PROJECT_DIR$/codifys/hackos/alternating_string.py" />
+        <option value="$PROJECT_DIR$/codifys/hackos/input00.txt" />
+        <option value="$PROJECT_DIR$/codifys/hackos/subset_max.py" />
       </list>
     </option>
   </component>
@@ -204,13 +185,13 @@
             <path>
               <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
               <item name="algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="codifys" type="462c0819:PsiDirectoryNode" />
+              <item name="graphs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
               <item name="algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="codifys" type="462c0819:PsiDirectoryNode" />
-              <item name="hackos" type="462c0819:PsiDirectoryNode" />
+              <item name="graphs" type="462c0819:PsiDirectoryNode" />
+              <item name="BFS" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="algorithms" type="b2602c69:ProjectViewProjectNode" />
@@ -391,11 +372,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32891566" />
@@ -404,9 +385,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49964765" weight="0.32891566" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32891566" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49682876" visible="true" weight="0.49879518" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49682876" weight="0.35060242" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50317127" side_tool="true" weight="0.31445783" />
-      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49682876" weight="0.31445783" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="10" sideWeight="0.49682876" visible="true" weight="0.31445783" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -424,44 +405,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/graphs/graph.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="66" selection-start-line="11" selection-start-column="66" selection-end-line="11" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quicksort/quicksort.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1974">
-          <caret line="94" column="8" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codifys/chapter1/1.1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graphs/graph_rep.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graphs/evaluate_graph.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graphs/DFS/scc.pkl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$USER_HOME$/.virtualenvs/sorts/lib/python3.7/site-packages/networkx/classes/digraph.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -518,13 +461,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graphs/BFS/BFS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -752,17 +688,54 @@
     <entry file="file://$PROJECT_DIR$/codifys/hackos/input13.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/codifys/hackos/strange_arrays.py">
+    <entry file="file://$PROJECT_DIR$/codifys/hackos/sherlock.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
-          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codifys/hackos/sherlock.py">
+    <entry file="file://$PROJECT_DIR$/codifys/hackos/strange_arrays.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="7" selection-start-line="7" selection-end-line="25" selection-end-column="16" />
+        <state relative-caret-position="286">
+          <caret line="19" selection-start-line="19" selection-end-line="21" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codifys/hackos/input06.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codifys/hackos/alternating_string.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codifys/hackos/triplets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="129" selection-start-line="129" selection-end-line="132" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codifys/hackos/input00.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codifys/hackos/input03.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codifys/hackos/subset_max.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graphs/BFS/BFS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
         </state>
       </provider>
     </entry>
